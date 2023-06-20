@@ -18,78 +18,14 @@
     <script type='text/javascript' src='JS/chatlib.js' id='libgsl-js'></script>
 
     <script type='text/javascript' src='JS/elfsightsocialwidget.js' id='libgsl-js'></script>
-	
-	<!--
-	<iframe src="https://jivo.chat/xcsvzkjHnE" width="361px" height="720px" align="left">
- 		Чат с РУДН
-	 </iframe>
-	-->
-	
-<!-- 	<iframe class="jivoIframe" src="https://jivo.chat/xcsvzkjHnE" width="550px" height="720px" align="left">
- 		Чат с РУДН
-	 </iframe> -->
 
-<!--
-
-	<iframe src="https://jivo.chat/xcsvzkjHnE" style="width:100%; height:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" src="index.html" frameborder="0" height="100%" width="100%">
- 		Чат с РУДН
-	</iframe>
-
-	<iframe class="jivoIframe" src="https://jivo.chat/iLZjZFNnQP" width="550px" height="720px" align="left">
- 		Чат с РУДН
-	 </iframe>
--->
-
-	
 </head>
 
 <body>
-	
-	
-	<!-- <img src="https://sbibankllc.ru/sites/default/files/inline-images/nakop.png"> -->
 	 <img src="https://sbibankllc.ru/sites/default/files/inline-images/nakop.png">
-	
-        <!--                      
-	<script>
-		function empty() {
-			jivo_destroy();
-		}
-	</script>	
-	-->
-	
-  <!-- <a href="#" <a href="#" onclick="jivo_api.open();return false; jivo_init();">Открыть чат</a> -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-54CDH15LPH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-54CDH15LPH');
-    </script>
-
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '132467715300867');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=132467715300867&ev=PageView&noscript=1" /></noscript>
-    <!-- End Facebook Pixel Code -->
-
-	<!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -107,11 +43,12 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/64687519" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 	
+	
 <script src="//code.jivo.ru/widget/tpUuEKVbrH" async></script>
 
 <script>
 	function jivo_onLoadCallback() {		
-		jivo_chat_page = true;
+		window.jivo_chat_page = true;
 		console.log("Отработал jivo_onLoadCallback");
 		jivo_init(); 
 	}
@@ -133,73 +70,11 @@
 
 	}
 </style>
+-->
 
 	
 	
-<script>
-	function jivo_onLoadCallback() {		
-		window.jivo_chat_page = true;
-		console.log("Отработал jivo_onLoadCallback");
-		window.jivo_init(); 
-	}
-</script> -->
-	
-<!-- 
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			window.jivo_chat_page = true;	
-			window.jivo_init();
-			
-						
-			// Сделайте элемент DIV перетаскиваемым:
-			dragElement(document.getElementById("mobileContainer_"));
 
-			function dragElement(elmnt) {
-			  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-			  if (document.getElementById(elmnt.id + "header")) {
-			    // если присутствует, заголовок - это место, откуда вы перемещаете DIV:
-			    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-			  } else {
-			    // в противном случае переместите DIV из любого места внутри DIV:
-			    elmnt.onmousedown = dragMouseDown;
-			  }
-
-			  function dragMouseDown(e) {
-			    e = e || window.event;
-			    e.preventDefault();
-			    // получить положение курсора мыши при запуске:
-			    pos3 = e.clientX;
-			    pos4 = e.clientY;
-			    document.onmouseup = closeDragElement;
-			    // вызов функции при каждом перемещении курсора:
-			    document.onmousemove = elementDrag;
-			  }
-
-			  function elementDrag(e) {
-			    e = e || window.event;
-			    e.preventDefault();
-			    // вычислить новую позицию курсора:
-			    pos1 = pos3 - e.clientX;
-			    pos2 = pos4 - e.clientY;
-			    pos3 = e.clientX;
-			    pos4 = e.clientY;
-			    // установите новое положение элемента:
-			    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-			    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-			  }
-
-			  function closeDragElement() {
-			    // остановка перемещения при отпускании кнопки мыши:
-			    document.onmouseup = null;
-			    document.onmousemove = null;
-			  }
-			}
-			
-			
-		}, false);
-		
-	</script>
- -->
 	
 </body>
 </html>
